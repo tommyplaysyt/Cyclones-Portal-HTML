@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyclones Portal</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      /* Background image */
+      background-image: url('https://media.discordapp.net/attachments/947777418754682910/1207175724394479626/image.png?ex=65deb100&is=65cc3c00&hm=01f93f1e750038f5c98a761276f93d085a6698cb8033aab2292ff13491744c9c&=&format=webp&quality=lossless&width=1007&height=671'); /* Replace with your image URL */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white; /* Set text color to white */
+      font-family: 'Roboto', sans-serif; /* Set font */
+    }
+
+    /* Custom button style */
+    .btn-custom {
+      background-color: #6c757d !important; /* Grey background color */
+      border-color: #6c757d !important; /* Border color */
+      color: white !important; /* Text color */
+      font-weight: bold !important; /* Bold text */
+      font-family: 'Roboto', sans-serif; /* Set font */
+    }
+
+    /* Hover effect */
+    .btn-custom:hover {
+      background-color: #343a40 !important; /* Dark grey background color on hover */
+      border-color: #6c757d !important; /* Border color */
+    }
+
+    /* Text color on hover */
+    .btn-custom:hover span {
+      color: white !important; /* Text color on hover */
+    }
+
+    /* Navigation Banner style */
+    .navigation-banner {
+      margin-bottom: 20px;
+    }
+
+    /* Navigation button style */
+    .navigation-button {
+      background-color: #6c757d !important; /* Grey background color */
+      border-color: #6c757d !important; /* Border color */
+      color: white !important; /* Text color */
+      font-weight: bold !important; /* Bold text */
+      font-family: 'Roboto', sans-serif; /* Set font */
+    }
+
+    /* Navigation button hover effect */
+    .navigation-button:hover {
+      background-color: #343a40 !important; /* Dark grey background color on hover */
+      border-color: #6c757d !important; /* Border color */
+    }
+
+    /* Navigation button text color on hover */
+    .navigation-button:hover span {
+      color: white !important; /* Text color on hover */
+    }
+
+    /* Bottom bar style */
+    .bottom-bar {
+      background-color: #343a40; /* Dark grey background color */
+      color: white; /* Text color */
+      padding: 10px 0; /* Padding */
+      text-align: center; /* Center align text */
+      position: fixed; /* Fixed position */
+      bottom: 0; /* Align at the bottom */
+      left: 0; /* Align to the left */
+      width: 100%; /* Full width */
+      z-index: 1000; /* Set z-index */
+      font-size: 14px; /* Font size */
+      font-weight: bold; /* Bold text */
+      font-family: 'Roboto', sans-serif; /* Set font */
+    }
+
+    /* Bottom bar link style */
+    .bottom-bar a {
+      color: white; /* Link text color */
+      text-decoration: none; /* Remove underline */
+    }
+
+    /* Bottom bar link hover effect */
+    .bottom-bar a:hover {
+      text-decoration: underline; /* Underline on hover */
+    }
+
+    /* Main content style */
+    .main-content {
+      padding-bottom: 80px; /* Adjust padding to accommodate bottom bar */
+    }
+
+    /* Notification banner style */
+    .notification-banner {
+      background-color: red;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Notification Banner -->
+<div class="container-fluid notification-banner">
+  <a href="current_cyclones.html" class="alert-link" style="color: white;">CYCLONE ALERT: Click here for current cyclones and lows!</a>
+</div>
+
+<div class="container mt-5 main-content">
+  <h1 class="text-center mb-4">Cyclones Portal</h1>
+  
+  <!-- Navigation Banner -->
+  <div class="row justify-content-center mb-4 navigation-banner">
+    <div class="col-md-2">
+      <a href="#" class="btn btn-custom btn-block mb-3 navigation-button"><span>Home</span></a>
+    </div>
+    <div class="col-md-2">
+      <a href="#" class="btn btn-custom btn-block mb-3 navigation-button"><span>Guides</span></a>
+    </div>
+    <div class="col-md-2">
+      <a href="#" class="btn btn-custom btn-block mb-3 navigation-button"><span>About</span></a>
+    </div>
+    <!-- You can add more buttons if needed -->
+  </div>
+  <hr>
+  
+  <h4 class="text-center mb-4"><em>Guides and Information regarding Tropical Cyclones</em></h4>
+  <h6 class="text-center mb-4">Source references can be found at the bottom.</h6>
+  <h4 class="text-center mb-4">Jump to Chapters:</h4>
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <a href="https://www.windy.com" class="btn btn-custom btn-block mb-3" target="_blank"><span>1. Interpreting Forecast Track Maps</span></a>
+      <h6 class="text-center mb-4">Get a better understanding in reading and predicting forecast track maps from different Meteorology Services.</h6>
+    </div>
+    <div class="col-md-4">
+      <a href="https://www.metoc.navy.mil/jtwc/jtwc.html" class="btn btn-custom btn-block mb-3" target="_blank"><span>Go to JTWC</span></a>
+      <h6 class="text-center mb-4">Responsible for providing Typhoon Forecasts and warnings for the Western Pacific and Indian Ocean Basins.</h6>
+    </div>
+    <div class="col-md-4">
+      <a href="http://www.bom.gov.au/" class="btn btn-custom btn-block mb-3" target="_blank"><span>Go to BoM</span></a>
+      <h6 class="text-center mb-4">Australia's national weather, climate and water agency. Through regular forecasts, warnings, monitoring and advice.</h6>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <a href="https://www.youtube.com/@cyclonesoz" class="btn btn-custom btn-block mb-3" target="_blank"><span>Go to CyclonesOZ</span></a>
+      <h6 class="text-center mb-4">YouTuber covering Australian weather, cyclones and thunderstorms. Also taking peeks at strong cyclones and typhoons globally.</h6>
+    </div>
+  </div>
+  <hr>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <a href="guides.html" class="btn btn-custom btn-block mb-3" target="_blank"><span>Guides and Information regarding Tropical Cyclones</span></a>
+      <h6 class="text-center mb-4">Want to learn more about Tropical Cyclones in general? Our extensive guides cite information from reliable sources. Gain a better understanding on tracking and forecasts.</h6>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom Bar -->
+<div class="bottom-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        Version 1.0 | © 2024 Cyclones Portal
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and dependencies (optional, but recommended for Bootstrap features) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

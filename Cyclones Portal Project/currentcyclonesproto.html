@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Cyclones/Lows</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      /* Background image */
+      background-image: url('https://media.discordapp.net/attachments/947777418754682910/1207175724394479626/image.png?ex=65deb100&is=65cc3c00&hm=01f93f1e750038f5c98a761276f93d085a6698cb8033aab2292ff13491744c9c&=&format=webp&quality=lossless&width=1007&height=671'); /* Replace with your image URL */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white; /* Set text color to white */
+      font-family: 'Roboto', sans-serif; /* Set font */
+    }
+
+    /* Custom button style */
+    .btn-custom {
+      background-color: #6c757d; /* Grey background color */
+      border-color: #6c757d; /* Border color */
+      color: white; /* Text color */
+      font-weight: bold; /* Bold text */
+      font-family: 'Roboto', sans-serif; /* Set font */
+    }
+
+    /* Hover effect */
+    .btn-custom:hover {
+      background-color: #343a40; /* Dark grey background color on hover */
+      border-color: #6c757d; /* Border color */
+    }
+
+    /* Text color on hover */
+    .btn-custom:hover span {
+      color: white; /* Text color on hover */
+    }
+
+    /* Navigation Banner style */
+    .navigation-banner {
+      margin-bottom: 20px;
+    }
+
+    /* Navigation button style */
+    .navigation-button {
+      background-color: #6c757d; /* Grey background color */
+      border-color: #6c757d; /* Border color */
+      color: white; /* Text color */
+      font-weight: bold; /* Bold text */
+      font-family: 'Roboto', sans-serif; /* Set font */
+    }
+
+    /* Navigation button hover effect */
+    .navigation-button:hover {
+      background-color: #343a40; /* Dark grey background color on hover */
+      border-color: #6c757d; /* Border color */
+    }
+
+    /* Navigation button text color on hover */
+    .navigation-button:hover span {
+      color: white; /* Text color on hover */
+    }
+
+    /* Bottom bar style */
+    .bottom-bar {
+      background-color: #343a40; /* Dark grey background color */
+      color: white; /* Text color */
+      padding: 10px 0; /* Padding */
+      text-align: center; /* Center align text */
+      position: fixed; /* Fixed position */
+      bottom: 0; /* Align at the bottom */
+      left: 0; /* Align to the left */
+      width: 100%; /* Full width */
+      z-index: 1000; /* Set z-index */
+      font-size: 14px; /* Font size */
+      font-weight: bold; /* Bold text */
+      font-family: 'Roboto', sans-serif; /* Set font */
+    }
+
+    /* Bottom bar link style */
+    .bottom-bar a {
+      color: white; /* Link text color */
+      text-decoration: none; /* Remove underline */
+    }
+
+    /* Bottom bar link hover effect */
+    .bottom-bar a:hover {
+      text-decoration: underline; /* Underline on hover */
+    }
+
+    /* Main content style */
+    .main-content {
+      padding-bottom: 80px; /* Adjust padding to accommodate bottom bar */
+    }
+
+    /* Cyclone/Low info section style */
+    .cyclone-info {
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+      padding: 20px; /* Padding */
+      margin-bottom: 20px; /* Margin bottom */
+    }
+
+    /* Cyclone/Low image style */
+    .cyclone-image {
+      width: 100%; /* Full width */
+      height: auto; /* Auto height */
+      margin-bottom: 20px; /* Margin bottom */
+    }
+
+    /* Info points style */
+    .info-points {
+      column-count: 2; /* Display in two columns */
+      column-gap: 20px; /* Column gap */
+      font-family: 'Roboto', sans-serif; /* Set font */
+    }
+
+    /* Info point style */
+    .info-point {
+      margin-bottom: 10px; /* Margin bottom */
+      font-size: 16px; /* Font size */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-5 main-content">
+  <h1 class="text-center mb-4">Cyclones Portal</h1>
+  
+  <!-- Navigation Banner -->
+  <div class="row justify-content-center mb-4 navigation-banner">
+    <div class="col-md-3">
+      <a href="#" class="btn btn-custom btn-block mb-3 navigation-button" target="_blank"><span>Button 1</span></a>
+    </div>
+    <div class="col-md-3">
+      <a href="#" class="btn btn-custom btn-block mb-3 navigation-button" target="_blank"><span>Button 2</span></a>
+    </div>
+    <div class="col-md-3">
+      <a href="#" class="btn btn-custom btn-block mb-3 navigation-button" target="_blank"><span>Button 3</span></a>
+    </div>
+    <!-- You can add more buttons if needed -->
+  </div>
+  <hr>
+  
+  <!-- Cyclone/Low Info Section -->
+  <div class="cyclone-info">
+    <h2 class="text-center mb-3">Cyclone/Low Name</h2>
+    <img src="https://via.placeholder.com/500x300" alt="Cyclone/Low Image" class="cyclone-image">
+    <ul class="info-points">
+      <li class="info-point">Info point 1</li>
+      <li class="info-point">Info point 2</li>
+      <li class="info-point">Info point 3</li>
+      <li class="info-point">Info point 4</li>
+    </ul>
+  </div>
+
+  <!-- Add more cyclone/lows info sections as needed -->
+
+</div>
+
+<!-- Bottom bar -->
+<div class="bottom-bar">
+  <p>Version 1.0 | © 2024 Cyclones Portal</p>
+</div>
+
+<!-- Bootstrap JS and dependencies (optional, but recommended for Bootstrap features) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

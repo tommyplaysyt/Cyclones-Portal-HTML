@@ -4,111 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Staff Access</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-image: url('https://media.discordapp.net/attachments/947777418754682910/1207175724394479626/image.png?ex=65deb100&is=65cc3c00&hm=01f93f1e750038f5c98a761276f93d085a6698cb8033aab2292ff13491744c9c&=&format=webp&quality=lossless&width=1007&height=671');
-      background-size: cover;
-      color: white;
-    }
-    .container {
-      margin-top: 100px;
-    }
-    .access-form {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-radius: 10px;
-    }
-    .form-control {
-      background-color: rgba(255, 255, 255, 0.5);
-      color: black;
-    }
-    .access-btn {
-      background-color: #007bff;
-      color: white;
-      border: none;
-    }
-    .access-btn:hover {
-      background-color: #0056b3;
-    }
-    .error-message {
-      color: red;
-      margin-top: 10px;
-    }
-  </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-4">
-      <div class="access-form">
-        <h2 class="text-center mb-4">Enter Access Key</h2>
-        <form id="accessForm">
-          <div class="form-group">
-            <input type="text" class="form-control" id="accessKey" name="accessKey" placeholder="Access Key" required>
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-block access-btn">Access</button>
-          </div>
-        </form>
-        <p id="errorMessage" class="text-center error-message"></p>
-      </div>
-    </div>
-  </div>
-</div>
+<h2>Staff Access</h2>
+<form method="post">
+  <input type="text" name="access_key" placeholder="Enter access key">
+  <button type="submit">Submit</button>
+</form>
 
-<!-- Bootstrap JS and dependencies (optional, but recommended for Bootstrap features) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script>
-  document.getElementById("accessForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    var accessKey = document.getElementById("accessKey").value;
-
-    // Simulated key validation (replace with server-side logic)
-    if (validateAccessKey(accessKey)) {
-      // Check if the key has been used before
-      if (!isKeyUsed(accessKey)) {
-        // Mark the key as used
-        markKeyAsUsed(accessKey);
-        // Redirect to the staff dashboard or any other page
-        window.location.href = "staff-dashboard.html";
-      } else {
-        document.getElementById("errorMessage").textContent = "This access key has already been used.";
-      }
-    } else {
-      document.getElementById("errorMessage").textContent = "Invalid access key. Please try again.";
-    }
-  });
-
-  // Simulated key validation function (replace with server-side logic)
-  function validateAccessKey(accessKey) {
-    // Here you can implement your validation logic
-    // For demonstration purposes, let's assume all keys are valid
-    return true;
-  }
-
-  // Check if the key has been used before
-  function isKeyUsed(accessKey) {
-    // Retrieve used keys from localStorage
-    var usedKeys = JSON.parse(localStorage.getItem("usedKeys")) || [];
-    return usedKeys.includes(accessKey);
-  }
-
-  // Mark the key as used
-  function markKeyAsUsed(accessKey) {
-    // Retrieve used keys from localStorage
-    var usedKeys = JSON.parse(localStorage.getItem("usedKeys")) || [];
-    // Add the current key to the used keys list
-    usedKeys.push(accessKey);
-    // Update localStorage
-    localStorage.setItem("usedKeys", JSON.stringify(usedKeys));
-  }
-</script>
+<?php if(isset($error)) { ?>
+  <p><?php echo $error; ?></p>
+<?php } ?>
 
 </body>
 </html>

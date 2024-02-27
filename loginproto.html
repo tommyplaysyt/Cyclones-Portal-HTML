@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      /* Background image */
+      background-image: url('https://media.discordapp.net/attachments/947777418754682910/1207175724394479626/image.png?ex=65deb100&is=65cc3c00&hm=01f93f1e750038f5c98a761276f93d085a6698cb8033aab2292ff13491744c9c&=&format=webp&quality=lossless&width=1007&height=671'); /* Replace with your image URL */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white; /* Set text color to white */
+      font-family: 'Roboto', sans-serif; /* Set font */
+    }
+
+    /* Form container style */
+    .form-container {
+      margin-top: 100px; /* Adjust margin from top */
+      text-align: center; /* Center align text */
+    }
+
+    /* Form input style */
+    input[type="password"] {
+      width: 300px; /* Set width */
+      margin-bottom: 10px; /* Adjust margin */
+      padding: 10px; /* Padding */
+      border-radius: 5px; /* Border radius */
+      border: none; /* Remove border */
+    }
+
+    /* Button style */
+    input[type="button"] {
+      background-color: #6c757d; /* Grey background color */
+      border: none; /* Remove border */
+      color: white; /* Text color */
+      padding: 10px 20px; /* Padding */
+      border-radius: 5px; /* Border radius */
+      cursor: pointer; /* Add cursor pointer */
+      font-weight: bold; /* Bold text */
+    }
+
+    /* Button hover effect */
+    input[type="button"]:hover {
+      background-color: #343a40; /* Dark grey background color on hover */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container form-container">
+  <form>
+    <label for="pswd">Enter your password: </label>
+    <br>
+    <input type="password" id="pswd">
+    <br>
+    <input type="button" value="Submit" onclick="checkPswd();" class="btn">
+  </form>
+</div>
+
+<!-- Function to check password -->
+<script type="text/javascript">
+  function checkPswd() {
+    var confirmPassword = "admin";
+    var password = document.getElementById("pswd").value;
+    if (password == confirmPassword) {
+      window.location = "index.html";
+      alert("Success! Click OK to continue!");
+    } else {
+      alert("Passwords do not match.");
+    }
+  }
+</script>
+
+</body>
+</html>

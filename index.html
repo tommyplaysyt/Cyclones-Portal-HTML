@@ -99,29 +99,55 @@
 
     /* Notification banner style */
     .notification-banner {
-      background-color: red;
+      background-color: rgba(255, 0, 0, 0.8); /* Red with transparency */
       color: white;
       padding: 10px 0;
       text-align: center;
       font-weight: bold;
       font-family: 'Roboto', sans-serif;
     }
+
+    /* Website banner style */
+    .website-banner {
+      background-color: rgba(52, 58, 64, 0.8); /* Dark grey with transparency */
+      color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center; /* Center align items */
+      justify-content: center; /* Center align content */
+    }
+
+    /* Website banner image style */
+    .website-image {
+      width: 150px; /* Adjust image width */
+      margin-right: 20px;
+    }
+
+    /* Website banner text style */
+    .website-info {
+      flex: 1;
+    }
+
+    /* Website title style */
+    .website-title {
+      font-size: 20px; /* Adjust title font size */
+      margin-bottom: 10px;
+    }
+
+    /* Website description style */
+    .website-description {
+      font-size: 14px; /* Adjust description font size */
+    }
   </style>
 </head>
 <body>
 
-<!-- Notification Banner -->
-<!--<div class="container-fluid notification-banner">
-  <a href="current_cyclones.html" class="alert-link" style="color: white;">CYCLONE ALERT: Click here for current cyclones and lows!</a>
-</div>
-
--->
-
 <div class="container mt-5 main-content">
   <h1 class="text-center mb-4">Cyclones Portal</h1>
-  
-    
-    <hr>
+  <hr>
+
   <!-- Navigation Banner -->
   <div class="row justify-content-center mb-4 navigation-banner">
     <div class="col-md-2">
@@ -136,39 +162,59 @@
     <!-- You can add more buttons if needed -->
   </div>
 
-  
   <h4 class="text-center mb-4">Great for tracking cyclones in the Queensland Region.</h4>
   <h6 class="text-center mb-4">Including useful websites, interpretation guides and more.</h6>
-  <div class="row justify-content-center">
-    <div class="col-md-4">
-      <a href="https://www.windy.com" class="btn btn-custom btn-block mb-3" target="_blank"><span>Go to Windy</span></a>
-      <h6 class="text-center mb-4">Great for anything wind, waves, and more.</h6>
-    </div>
-    <div class="col-md-4">
-      <a href="https://www.metoc.navy.mil/jtwc/jtwc.html" class="btn btn-custom btn-block mb-3" target="_blank"><span>Go to JTWC</span></a>
-      <h6 class="text-center mb-4">Responsible for providing Typhoon Forecasts and warnings for the Western Pacific and Indian Ocean Basins.</h6>
-    </div>
-    <div class="col-md-4">
-      <a href="http://www.bom.gov.au/" class="btn btn-custom btn-block mb-3" target="_blank"><span>Go to BoM</span></a>
-      <h6 class="text-center mb-4">Australia's national weather, climate and water agency. Through regular forecasts, warnings, monitoring and advice.</h6>
+
+  <!-- Website Banners -->
+  <div class="website-banner">
+    <img src="https://cdn.discordapp.com/attachments/1215422260374929411/1215422329069375508/image.png?ex=65fcb140&is=65ea3c40&hm=4175fbde283b7e6482440e212a96eea2b241e4da62281d2b8b1bba32dc1da499&" alt="Windy Logo" class="website-image">
+    <div class="website-info">
+      <h3 class="website-title">Windy</h3>
+      <p class="website-description">Great for anything wind, waves, and more. Visit Windy for accurate weather forecasts.</p>
+      <a href="https://www.windy.com" class="btn btn-custom" target="_blank">Visit Website</a>
     </div>
   </div>
-  <div class="row justify-content-center">
-    <div class="col-md-4">
-      <a href="https://www.youtube.com/@cyclonesoz" class="btn btn-custom btn-block mb-3" target="_blank"><span>Go to CyclonesOZ</span></a>
-      <h6 class="text-center mb-4">YouTuber covering Australian weather, cyclones and thunderstorms. Also taking peeks at strong cyclones and typhoons globally.</h6>
+
+  <div class="website-banner">
+    <img src="https://www.metoc.navy.mil/jtwc/products/abpwsair.jpg" alt="JTWC Logo" class="website-image">
+    <div class="website-info">
+      <h3 class="website-title">JTWC</h3>
+      <p class="website-description">Responsible for providing Typhoon Forecasts and warnings for the Western Pacific and Indian Ocean Basins.</p>
+      <a href="https://www.metoc.navy.mil/jtwc/jtwc.html" class="btn btn-custom" target="_blank">Visit Website</a>
     </div>
   </div>
-  <hr>
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <a href="guidesproto.html" class="btn btn-custom btn-block mb-3" target="_blank"><span>Guides and Information regarding Weather Events</span></a>
-      <h6 class="text-center mb-4">Want to learn more about Tropical Cyclones or crazy weather in general? Our extensive guides are referenced from reliable sources and written by fellow community members. Gain a better understanding on tracking and forecasts. If you wish to contribute to the documents, click Contribute on the bottom bar.</h6>
+
+  <div class="website-banner">
+    <img src="https://cdn.discordapp.com/attachments/1215422260374929411/1215423014607257621/image.png?ex=65fcb1e4&is=65ea3ce4&hm=e90b03145b4becc09c3dc27895c1789cdd959b0cdbb4b84e429587eedf38daa2&" alt="BoM Logo" class="website-image">
+    <div class="website-info">
+      <h3 class="website-title">BoM</h3>
+      <p class="website-description">Australia's national weather, climate and water agency. Through regular forecasts, warnings, monitoring and advice.</p>
+        <hr>
+        <p class="website-description">Great source for Cyclone Track Maps.</p>
+        
+      <a href="http://www.bom.gov.au/" class="btn btn-custom" target="_blank">Visit Website</a>
+    </div>
+  </div>
+
+  <div class="website-banner">
+    <img src="https://via.placeholder.com/150" alt="CyclonesOZ Logo" class="website-image">
+    <div class="website-info">
+      <h3 class="website-title">CyclonesOZ</h3>
+      <p class="website-description">YouTuber covering Australian weather, cyclones and thunderstorms. Also taking peeks at strong cyclones and typhoons globally.</p>
+      <a href="https://www.youtube.com/@cyclonesoz" class="btn btn-custom" target="_blank">Visit Website</a>
+    </div>
+  </div>
+
+  <!-- Guides and Information Banner -->
+  <div class="website-banner mt-5">
+    <div class="website-info">
+      <h3 class="website-title">Guides and Information regarding Weather Events</h3>
+      <p class="website-description">Want to learn more about Tropical Cyclones or crazy weather in general? Our extensive guides are referenced from reliable sources and written by fellow community members. Gain a better understanding on tracking and forecasts. If you wish to contribute to the documents, click Contribute on the bottom bar.</p>
+      <a href="guidesproto.html" class="btn btn-custom" target="_blank">Visit Guides</a>
     </div>
   </div>
 </div>
 
-<!-- Bottom Bar -->
 <!-- Bottom Bar -->
 <div class="bottom-bar">
   <div class="container">
@@ -180,6 +226,7 @@
     </div>
   </div>
 </div>
+
 <!-- Bootstrap JS and dependencies (optional, but recommended for Bootstrap features) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

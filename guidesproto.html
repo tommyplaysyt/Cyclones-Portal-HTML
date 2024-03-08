@@ -100,9 +100,73 @@
     .chapter-buttons {
       margin-bottom: 20px;
     }
+
+    /* Sidebar */
+    .sidebar {
+      background-color: #343a40; /* Dark grey background color */
+      color: white; /* Text color */
+      padding: 20px;
+      position: fixed;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+    }
+
+    /* Sidebar link style */
+    .sidebar a {
+      display: block;
+      color: white;
+      margin-bottom: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    /* Sidebar link hover effect */
+    .sidebar a:hover {
+      color: #6c757d;
+    }
+
+    /* Content area style */
+    .content-area {
+      margin-left: 0; /* Adjust based on sidebar width */
+    }
+
+    /* Chapter title style */
+    .chapter-title {
+      border-bottom: 2px solid #6c757d;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
+
+<!-- Modal for Chapter List -->
+<div class="modal fade" id="chapterModal" tabindex="-1" role="dialog" aria-labelledby="chapterModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="chapterModalLabel">Chapters</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <a href="#chapter1">Chapter 1: Understanding Cyclones</a>
+        <br>
+        <a href="#chapter2">Chapter 2: Tracking Tropical Cyclones</a>
+        <br>
+        <a href="#chapter3">Chapter 3: Impact of Cyclones</a>
+        <br>
+        <a href="#chapter4">Chapter 4: Cyclone Preparedness</a>
+        <br>
+        <a href="#chapter5">Chapter 5: Cyclone Shelter Management</a>
+        <!-- Add more chapters as needed -->
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="container mt-5 main-content">
   <h1 class="text-center mb-4">Cyclones Portal - Guides</h1>
@@ -118,42 +182,38 @@
     <div class="col-md-2">
       <a href="aboutusproto.html" class="btn btn-custom btn-block mb-3 navigation-button"><span>About</span></a>
     </div>
-    <!-- You can add more buttons if needed -->
   </div>
-    
-    
-    <!-- Subtitle -->
+  
+  <!-- Subtitle -->
   <h4 class="text-center mb-4"><em>Guides and Information regarding Tropical Cyclones</em></h4>
   <h6 class="text-center mb-4">Source references can be found at the bottom.</h6>
 
-  <!-- Chapter Buttons -->
-  <div class="row justify-content-center chapter-buttons">
-    <div class="col-md-4">
-      <a href="#chapter1" class="btn btn-custom btn-block mb-3"><span>Chapter 1</span></a>
+  <!-- Chapter Content -->
+  <div class="content-area">
+    <h4 id="chapter1" class="chapter-title text-center mb-4">Chapter 1: Understanding Cyclones</h4>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <p>This chapter provides an overview of tropical cyclones, including their formation, structure, and behavior.</p>
+        <img src="https://via.placeholder.com/100x150" alt="Cyclone/Low Image" class="cyclone-image">
+      </div>
     </div>
-    <div class="col-md-4">
-      <a href="#chapter2" class="btn btn-custom btn-block mb-3"><span>Chapter 2</span></a>
-    </div>
-  </div>
-  <hr>
-    
-  
-  <h4 id="chapter1" class="text-center mb-4">Chapter 1: Understanding Cyclones</h4>
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <p>This chapter provides an overview of tropical cyclones, including their formation, structure, and behavior.</p>
-    <img src="https://via.placeholder.com/100x50" alt="Cyclone/Low Image" class="cyclone-image">
-    </div>
-  </div>
 
-  <hr>
+    <hr>
 
-  <h4 id="chapter2" class="text-center mb-4">Chapter 2: Tracking Tropical Cyclones</h4>
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <p>This chapter discusses techniques for tracking tropical cyclones, including satellite imagery, weather radar, and forecasting models.</p>
+    <h4 id="chapter2" class="chapter-title text-center mb-4">Chapter 2: Tracking Tropical Cyclones</h4>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <p>This chapter discusses techniques for tracking tropical cyclones, including satellite imagery, weather radar, and forecasting models.</p>
+      </div>
     </div>
+
+    <!-- Add more chapters with Lorem Ipsum -->
   </div>
+</div>
+
+<!-- Chapters Button -->
+<div class="sidebar">
+  <button type="button" class="btn btn-custom btn-block mb-3" data-toggle="modal" data-target="#chapterModal"><span>Chapters</span></button>
 </div>
 
 <!-- Bottom Bar -->
